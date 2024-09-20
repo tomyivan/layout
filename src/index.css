@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.sideBar__content {
+  scrollbar-width: thin;
+  scrollbar-color: #ffcead #fda035;
+}
+@layer components {
+  .layout {
+    @apply flex h-screen  relative
+  }
+  .main__layout {
+    @apply h-screen w-full flex
+  }
+  .sideBar {
+    @apply text-white  md:relative md:left-0 h-screen flex flex-col bg-orange-500  max-w-[240px] w-full border-r border-gray-300 transition-all 
+  }
+  .sideBar__title{
+    @apply p-4 h-[60px] font-bold uppercase text-2xl border-b border-orange-100 flex justify-start items-center gap-4
+  }
+  .sideBar__content {
+    @apply font-semibold pt-4 
+  }
+  .sideBar__item {
+    @apply py-3 px-4 flex items-center gap-4 hover:bg-orange-400 cursor-pointer hover:border-l-2 
+  }
+  .sideBar__item__group {
+    @apply py-3 text-left flex gap-4 hover:bg-orange-400  relative w-full px-4 cursor-pointer hover:border-l-2
+  }
+  .sideBar-show {
+    @apply left-0 transition-all
+  }
+  .sideBar__item__group__option{
+    @apply absolute left-full top-0 z-10 hidden w-48 mt-0  bg-orange-500  group-hover:block
+  }
+  .sideBar__compress {
+    @apply  text-white  md:relative md:left-0 h-screen flex flex-col bg-orange-500 max-w-[60px] w-full border-r border-gray-300 transition-all
+  }
+  .navBar{
+    @apply bg-orange-500 h-[60px] w-full p-4  flex justify-between items-center
+  }
+  .navBar__content{
+    @apply flex justify-between items-center uppercase font-semibold text-gray-100 gap-4 
+  }
+  .navBar__item{
+    @apply hover:cursor-pointer hover:bg-orange-300 p-2 rounded-lg
+  }
+  .content{
+    @apply w-full  bg-gray-100 p-2 
+  }
+  .btn {
+    @apply py-2 px-4 border-none rounded-md text-lg relative overflow-hidden shadow-lg font-semibold
+  }
+  .btn-primary {
+    @apply bg-blue-500 text-gray-100 hover:bg-blue-400
+  }
+  .btn-secondary {
+    @apply bg-gray-500 text-gray-100 hover:bg-gray-400
+  }
+  .btn-danger {
+    @apply bg-red-500 text-gray-100 hover:bg-red-400
+  }
+  .btn-warning {
+    @apply bg-yellow-500 text-gray-100 hover:bg-yellow-400
+  }
+  .btn-success {
+    @apply bg-green-500 text-gray-100 hover:bg-green-400
+  }
+  .btn-info {
+    @apply bg-cyan-500 text-gray-100 hover:bg-cyan-400
+  }
+  .btn-outline-primary {
+    @apply border border-blue-500 text-blue-500
+  }
+
+} 
